@@ -1,16 +1,17 @@
 import axios from "axios";
+import { response } from "express";
+import res from "express/lib/response";
 import { useEffect, useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const callApi = async () => {
-    axios.get("/api").then((res) => {
-      console.log(res.data.test);
-    });
-  };
+ 
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    callApi();
+    fetch('api')
+    .then((response) => res.json())
+    .then((response) => setData(response.message));
   }, []);
 
   const [inputValue1, setInputValue1] = useState("");

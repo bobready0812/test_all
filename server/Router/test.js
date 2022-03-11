@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("hi, 대현 세팅은 끝났다");
+router.get("/api", (req, res) => {
+  res.json({
+    message: "hello from backend"
+  })
 });
 
 module.exports = router;
