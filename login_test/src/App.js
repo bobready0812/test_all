@@ -53,7 +53,7 @@ const App = () => {
       <input
         value={inputValue2}
         onChange={changeValue2}
-        placeholder="비밀번호"
+        placeholder="비번"
       ></input>
       <input
         value={inputValue3}
